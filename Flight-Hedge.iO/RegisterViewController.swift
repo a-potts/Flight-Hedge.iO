@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
     
@@ -19,10 +20,19 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var nameView: UIView!
+    @IBOutlet weak var registerButtonView: UIButton!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        emailView.layer.cornerRadius = 10
+
+        nameView.layer.cornerRadius = 10
+        passwordView.layer.cornerRadius = 10
+        registerButtonView.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
     

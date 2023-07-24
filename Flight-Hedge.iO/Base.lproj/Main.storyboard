@@ -137,6 +137,7 @@
                             <constraint firstItem="FaM-xb-SVi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="xJJ-Ti-akR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5Yj-W3-i5u"/>
                     <connections>
                         <outlet property="loginButtonView" destination="igz-Uh-m3m" id="xM2-Yl-Nix"/>
                         <outlet property="nameText" destination="5fT-qG-FUT" id="EOh-Tu-SHY"/>
@@ -284,6 +285,7 @@
                         <outlet property="nameView" destination="C3C-Sn-oFQ" id="PNz-kH-l8Q"/>
                         <outlet property="passwordTextField" destination="kiB-zi-1C3" id="hw8-hM-43E"/>
                         <outlet property="passwordView" destination="PVq-VE-3jm" id="LBY-J6-CCv"/>
+                        <outlet property="registerButtonView" destination="m0S-ac-gl6" id="cuG-uV-8DC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U8Z-tp-lkG" sceneMemberID="firstResponder"/>
