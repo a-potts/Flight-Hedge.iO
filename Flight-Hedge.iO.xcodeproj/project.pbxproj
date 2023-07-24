@@ -16,6 +16,7 @@
 		535E93D22A6BEAA400EA0221 /* Flight_Hedge_iOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E93D12A6BEAA400EA0221 /* Flight_Hedge_iOTests.swift */; };
 		535E93DC2A6BEAA400EA0221 /* Flight_Hedge_iOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E93DB2A6BEAA400EA0221 /* Flight_Hedge_iOUITests.swift */; };
 		535E93DE2A6BEAA400EA0221 /* Flight_Hedge_iOUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E93DD2A6BEAA400EA0221 /* Flight_Hedge_iOUITestsLaunchTests.swift */; };
+		535E93ED2A6F2C1900EA0221 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E93EC2A6F2C1900EA0221 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		535E93D72A6BEAA400EA0221 /* Flight-Hedge.iOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flight-Hedge.iOUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		535E93DB2A6BEAA400EA0221 /* Flight_Hedge_iOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight_Hedge_iOUITests.swift; sourceTree = "<group>"; };
 		535E93DD2A6BEAA400EA0221 /* Flight_Hedge_iOUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight_Hedge_iOUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		535E93EC2A6F2C1900EA0221 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				535E93BC2A6BEAA300EA0221 /* SceneDelegate.swift */,
 				535E93BE2A6BEAA300EA0221 /* ViewController.swift */,
 				535E93C02A6BEAA300EA0221 /* Main.storyboard */,
+				535E93EC2A6F2C1900EA0221 /* RegisterViewController.swift */,
 				535E93C32A6BEAA300EA0221 /* Assets.xcassets */,
 				535E93C52A6BEAA300EA0221 /* LaunchScreen.storyboard */,
 				535E93C82A6BEAA300EA0221 /* Info.plist */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				535E93BF2A6BEAA300EA0221 /* ViewController.swift in Sources */,
+				535E93ED2A6F2C1900EA0221 /* RegisterViewController.swift in Sources */,
 				535E93BB2A6BEAA300EA0221 /* AppDelegate.swift in Sources */,
 				535E93BD2A6BEAA300EA0221 /* SceneDelegate.swift in Sources */,
 			);
