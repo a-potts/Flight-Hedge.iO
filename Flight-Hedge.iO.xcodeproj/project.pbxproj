@@ -19,6 +19,8 @@
 		535E93ED2A6F2C1900EA0221 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E93EC2A6F2C1900EA0221 /* RegisterViewController.swift */; };
 		535E93EF2A6F38CA00EA0221 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 535E93EE2A6F38CA00EA0221 /* GoogleService-Info.plist */; };
 		535E93F22A6F398200EA0221 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 535E93F12A6F398200EA0221 /* FirebaseAnalytics */; };
+		535E93F52A6F3D7400EA0221 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 535E93F42A6F3D7400EA0221 /* FirebaseAuth */; };
+		535E93F82A6F3DFE00EA0221 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E93F72A6F3DFE00EA0221 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 		535E93DD2A6BEAA400EA0221 /* Flight_Hedge_iOUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight_Hedge_iOUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		535E93EC2A6F2C1900EA0221 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		535E93EE2A6F38CA00EA0221 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		535E93F72A6F3DFE00EA0221 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				535E93F22A6F398200EA0221 /* FirebaseAnalytics in Frameworks */,
+				535E93F52A6F3D7400EA0221 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +93,7 @@
 				535E93D02A6BEAA400EA0221 /* Flight-Hedge.iOTests */,
 				535E93DA2A6BEAA400EA0221 /* Flight-Hedge.iOUITests */,
 				535E93B82A6BEAA200EA0221 /* Products */,
+				535E93F32A6F3D7400EA0221 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,10 +110,10 @@
 		535E93B92A6BEAA200EA0221 /* Flight-Hedge.iO */ = {
 			isa = PBXGroup;
 			children = (
+				535E93F92A6F3E0300EA0221 /* Models */,
+				535E93F62A6F3DD500EA0221 /* Auth */,
 				535E93BA2A6BEAA300EA0221 /* AppDelegate.swift */,
 				535E93BC2A6BEAA300EA0221 /* SceneDelegate.swift */,
-				535E93EC2A6F2C1900EA0221 /* RegisterViewController.swift */,
-				535E93BE2A6BEAA300EA0221 /* ViewController.swift */,
 				535E93C02A6BEAA300EA0221 /* Main.storyboard */,
 				535E93C32A6BEAA300EA0221 /* Assets.xcassets */,
 				535E93C52A6BEAA300EA0221 /* LaunchScreen.storyboard */,
@@ -135,6 +140,30 @@
 			path = "Flight-Hedge.iOUITests";
 			sourceTree = "<group>";
 		};
+		535E93F32A6F3D7400EA0221 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		535E93F62A6F3DD500EA0221 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				535E93BE2A6BEAA300EA0221 /* ViewController.swift */,
+				535E93EC2A6F2C1900EA0221 /* RegisterViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		535E93F92A6F3E0300EA0221 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				535E93F72A6F3DFE00EA0221 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +182,7 @@
 			name = "Flight-Hedge.iO";
 			packageProductDependencies = (
 				535E93F12A6F398200EA0221 /* FirebaseAnalytics */,
+				535E93F42A6F3D7400EA0221 /* FirebaseAuth */,
 			);
 			productName = "Flight-Hedge.iO";
 			productReference = 535E93B72A6BEAA200EA0221 /* Flight-Hedge.iO.app */;
@@ -276,6 +306,7 @@
 				535E93BF2A6BEAA300EA0221 /* ViewController.swift in Sources */,
 				535E93ED2A6F2C1900EA0221 /* RegisterViewController.swift in Sources */,
 				535E93BB2A6BEAA300EA0221 /* AppDelegate.swift in Sources */,
+				535E93F82A6F3DFE00EA0221 /* User.swift in Sources */,
 				535E93BD2A6BEAA300EA0221 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,6 +660,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 535E93F02A6F398200EA0221 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		535E93F42A6F3D7400EA0221 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 535E93F02A6F398200EA0221 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

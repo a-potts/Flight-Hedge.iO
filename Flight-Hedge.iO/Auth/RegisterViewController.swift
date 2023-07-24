@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseCore
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
@@ -35,7 +36,24 @@ class RegisterViewController: UIViewController {
         registerButtonView.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
+   
     
+    
+    func handleRegister(){
+        
+        guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else { return }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            if let error = error {
+                print("Error: \(error)")
+                return
+            }
+            
+            
+        }
+        
+        
+    }
 
     /*
     // MARK: - Navigation
