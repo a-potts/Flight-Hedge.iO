@@ -28,7 +28,19 @@ class ViewController: UIViewController {
         
     }
 
+ 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //Check the segue identifier
+        if segue.identifier == "Register" {
+            
+            //Unwrap the next viewController as the segues destination otherwsie return
+            guard segue.destination is RegisterViewController else {return}
+            //here is where you can say i.e nextViewController.apiController = thisFileApiController
+            
+        }
+    }
     
     //Actions
     

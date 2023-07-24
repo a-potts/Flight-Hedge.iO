@@ -75,7 +75,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="d2s-8s-OMJ" kind="showDetail" id="Jw1-bd-bjh"/>
+                                    <segue destination="d2s-8s-OMJ" kind="presentation" modalPresentationStyle="fullScreen" id="NQ5-qI-hC6"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane-flight-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Vs7-HY-BpC">
@@ -154,11 +154,11 @@
             <objects>
                 <viewController id="d2s-8s-OMJ" customClass="RegisterViewController" customModule="Flight_Hedge_iO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Ft-Rh-HZX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3C-Sn-oFQ">
-                                <rect key="frame" x="27" y="476" width="338" height="66"/>
+                                <rect key="frame" x="27" y="486" width="338" height="66"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rKP-Lu-O6G">
                                         <rect key="frame" x="5" y="24" width="325" height="18.666666666666671"/>
@@ -181,7 +181,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVq-VE-3jm">
-                                <rect key="frame" x="27" y="550" width="338" height="66"/>
+                                <rect key="frame" x="27" y="560" width="338" height="66"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="M3e-CN-Kym"/>
@@ -189,7 +189,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kiB-zi-1C3">
-                                <rect key="frame" x="34" y="565" width="325" height="34"/>
+                                <rect key="frame" x="34" y="575" width="325" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="325" id="nPM-CP-Rhb"/>
@@ -199,7 +199,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0S-ac-gl6">
-                                <rect key="frame" x="27" y="630" width="338" height="50"/>
+                                <rect key="frame" x="27" y="640" width="338" height="50"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="T50-nb-ESj"/>
@@ -211,7 +211,7 @@
                                 <state key="normal" title="Register"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erV-jY-80N">
-                                <rect key="frame" x="34" y="688" width="325" height="31"/>
+                                <rect key="frame" x="34" y="698" width="325" height="31"/>
                                 <color key="tintColor" systemColor="systemTealColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Already a user?">
