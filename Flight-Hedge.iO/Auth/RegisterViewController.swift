@@ -54,6 +54,32 @@ class RegisterViewController: UIViewController {
         
         
     }
+    
+    
+    @IBAction func registerTapped(_ sender: Any) {
+        handleRegister()
+    }
+    
+    
+//    private func registerUserIntoDatabaseWithUID(uid: String, values: [String: AnyObject]) {
+//        // Successfully Registered Value
+//             var ref: DatabaseReference!
+//
+//             ref = Database.database().reference(fromURL: "https://boatell-v2.firebaseio.com/")
+//
+//             let userRef = ref.child("users").child(uid)
+//
+////             let values = ["name": name, "email": email, "profileImageURL": metadata.downloadURL()]
+//
+//             userRef.updateChildValues(values) { (error, refer) in
+//                 if let error = error {
+//                     print("error child values: \(error)")
+//                     return
+//                 }
+//
+//                 print("Saved user successfully into firebase db")
+//             }
+//    }
 
     /*
     // MARK: - Navigation
