@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
+
 
 class ViewController: UIViewController {
     
@@ -47,6 +50,17 @@ class ViewController: UIViewController {
     @IBAction func loginTapped(_ sender: Any) {
         
         //Handle Firebase Login
+        guard let email = nameText.text, let password = passwordText.text  else { return }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if let error = error {
+                print("Error: \(error)")
+                return
+            }
+            
+            self.performSegue(withIdentifier: "LoggedIn", sender: self)
+            
+        }
     }
     
 }

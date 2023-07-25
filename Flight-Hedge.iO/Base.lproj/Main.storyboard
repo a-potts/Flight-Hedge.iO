@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" constant="338" id="yHd-Gv-qdC"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fT-qG-FUT">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fT-qG-FUT">
                                 <rect key="frame" x="34" y="467" width="325" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
@@ -144,6 +144,7 @@
                         <outlet property="nameView" destination="AnJ-Pt-TFg" id="g99-Gh-YdH"/>
                         <outlet property="passwordText" destination="FaM-xb-SVi" id="yFy-hE-HUS"/>
                         <outlet property="passwordView" destination="TZo-dh-kGw" id="Juh-Iy-BxC"/>
+                        <segue destination="Dmf-8f-kf2" kind="show" identifier="LoggedIn" id="mUd-Nc-K2f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -293,16 +294,92 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U8Z-tp-lkG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1007" y="-8"/>
+            <point key="canvasLocation" x="120" y="782"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="QyL-bU-4XZ">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Dmf-8f-kf2" customClass="HomeViewController" customModule="Flight_Hedge_iO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gEU-zj-W4q">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDR-w4-QgE">
+                                <rect key="frame" x="16" y="82" width="361" height="205"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="hEd-du-ta0"/>
+                                    <constraint firstAttribute="height" constant="205" id="mnR-F5-0OD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSO-jz-SBX">
+                                <rect key="frame" x="16" y="355" width="361" height="262"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="262" id="0df-iT-IPg"/>
+                                    <constraint firstAttribute="width" constant="361" id="qPN-G9-cKV"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticket Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kt3-l9-atR">
+                                <rect key="frame" x="16" y="53" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight Insurance Quote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsB-1P-zaJ">
+                                <rect key="frame" x="16" y="326" width="172" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cNt-rK-Ke9">
+                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="Home" image="house.and.flag.fill" catalog="system" id="uJv-Xd-XbW"/>
+                                    <tabBarItem title="Profile" image="person.fill" catalog="system" id="4Nv-ld-qad"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H0J-iv-rJ1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DsB-1P-zaJ" firstAttribute="top" secondItem="VDR-w4-QgE" secondAttribute="bottom" constant="39" id="0AO-Rk-bQu"/>
+                            <constraint firstItem="H0J-iv-rJ1" firstAttribute="trailing" secondItem="HSO-jz-SBX" secondAttribute="trailing" constant="16" id="3vi-mh-w8m"/>
+                            <constraint firstItem="Kt3-l9-atR" firstAttribute="top" secondItem="H0J-iv-rJ1" secondAttribute="top" constant="53" id="9Ka-c3-D74"/>
+                            <constraint firstItem="HSO-jz-SBX" firstAttribute="top" secondItem="DsB-1P-zaJ" secondAttribute="bottom" constant="8" symbolic="YES" id="DCn-Z2-m4A"/>
+                            <constraint firstItem="H0J-iv-rJ1" firstAttribute="trailing" secondItem="VDR-w4-QgE" secondAttribute="trailing" constant="16" id="UdW-f0-G6L"/>
+                            <constraint firstItem="HSO-jz-SBX" firstAttribute="leading" secondItem="H0J-iv-rJ1" secondAttribute="leading" constant="16" id="Zda-d9-R49"/>
+                            <constraint firstItem="Kt3-l9-atR" firstAttribute="leading" secondItem="H0J-iv-rJ1" secondAttribute="leading" constant="16" id="cRr-aY-dlP"/>
+                            <constraint firstItem="VDR-w4-QgE" firstAttribute="top" secondItem="Kt3-l9-atR" secondAttribute="bottom" constant="8" symbolic="YES" id="i8R-Wz-1DY"/>
+                            <constraint firstItem="DsB-1P-zaJ" firstAttribute="leading" secondItem="H0J-iv-rJ1" secondAttribute="leading" constant="16" id="pWh-fl-Rpe"/>
+                            <constraint firstItem="VDR-w4-QgE" firstAttribute="leading" secondItem="H0J-iv-rJ1" secondAttribute="leading" constant="16" id="pd2-qu-r1B"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="l19-K5-pKt"/>
+                    <connections>
+                        <outlet property="insuranceQuoteView" destination="HSO-jz-SBX" id="AM7-8p-khk"/>
+                        <outlet property="ticketView" destination="VDR-w4-QgE" id="18P-Y0-yTq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2J-R8-bKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1232.824427480916" y="-15.492957746478874"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house.and.flag.fill" catalog="system" width="128" height="84"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plane-flight-icon" width="512" height="512"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

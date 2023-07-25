@@ -21,6 +21,7 @@
 		535E93F22A6F398200EA0221 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 535E93F12A6F398200EA0221 /* FirebaseAnalytics */; };
 		535E93F52A6F3D7400EA0221 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 535E93F42A6F3D7400EA0221 /* FirebaseAuth */; };
 		535E93F82A6F3DFE00EA0221 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E93F72A6F3DFE00EA0221 /* User.swift */; };
+		535E93FC2A704A6E00EA0221 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E93FB2A704A6E00EA0221 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		535E93EC2A6F2C1900EA0221 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		535E93EE2A6F38CA00EA0221 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		535E93F72A6F3DFE00EA0221 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		535E93FB2A704A6E00EA0221 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		535E93B92A6BEAA200EA0221 /* Flight-Hedge.iO */ = {
 			isa = PBXGroup;
 			children = (
+				535E93FA2A704A5600EA0221 /* Views */,
 				535E93F92A6F3E0300EA0221 /* Models */,
 				535E93F62A6F3DD500EA0221 /* Auth */,
 				535E93BA2A6BEAA300EA0221 /* AppDelegate.swift */,
@@ -162,6 +165,14 @@
 				535E93F72A6F3DFE00EA0221 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		535E93FA2A704A5600EA0221 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				535E93FB2A704A6E00EA0221 /* HomeViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 				535E93BB2A6BEAA300EA0221 /* AppDelegate.swift in Sources */,
 				535E93F82A6F3DFE00EA0221 /* User.swift in Sources */,
 				535E93BD2A6BEAA300EA0221 /* SceneDelegate.swift in Sources */,
+				535E93FC2A704A6E00EA0221 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
