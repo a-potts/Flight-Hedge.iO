@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var ticketView: UIView!
     @IBOutlet weak var insuranceQuoteView: UIView!
     
+    @IBOutlet weak var ticketDetailsView: UIView!
     
 
     override func viewDidLoad() {
@@ -25,10 +26,12 @@ class HomeViewController: UIViewController {
     
     func setUpViews() {
         
-        ticketView.layer.cornerRadius = 10
+        ticketView.layer.cornerRadius = 7
         ticketView.layer.shadowOpacity = 2
         
-        insuranceQuoteView.layer.cornerRadius = 10
+        ticketDetailsView.layer.cornerRadius = 7
+        
+        insuranceQuoteView.layer.cornerRadius = 7
         insuranceQuoteView.layer.shadowOpacity = 2
         
         
