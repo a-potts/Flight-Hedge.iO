@@ -10,11 +10,13 @@ import Vision
 
 class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    //Varibales
+    var ticket: Ticket?
+    
     
     
     @IBOutlet weak var ticketView: UIView!
     @IBOutlet weak var insuranceQuoteView: UIView!
-    
     @IBOutlet weak var ticketDetailsView: UIView!
     
     
@@ -23,6 +25,9 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     //Labels
     @IBOutlet weak var departLabel: UILabel!
+    
+    @IBOutlet weak var departLabel2: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +74,9 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             
             //We are in a closiure on a background thread, we want to make sure we dispatch to the main thread
-            DispatchQueue.main.async { self?.departLabel.text = text }
+            DispatchQueue.main.async { self?.departLabel2.text = text
+                print("Flight Details ::\(text)")
+            }
            
         }
         
@@ -140,6 +147,7 @@ extension HomeViewController {
         UIGraphicsPopContext()
         CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
         ticketImage.image = newImage
+        
         
         recognizeText(image: newImage)
         

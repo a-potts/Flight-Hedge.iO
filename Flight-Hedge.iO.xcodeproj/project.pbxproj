@@ -22,6 +22,8 @@
 		535E93F52A6F3D7400EA0221 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 535E93F42A6F3D7400EA0221 /* FirebaseAuth */; };
 		535E93F82A6F3DFE00EA0221 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E93F72A6F3DFE00EA0221 /* User.swift */; };
 		535E93FC2A704A6E00EA0221 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E93FB2A704A6E00EA0221 /* HomeViewController.swift */; };
+		535E93FE2A71266C00EA0221 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E93FD2A71266C00EA0221 /* Ticket.swift */; };
+		535E94002A7126FB00EA0221 /* AddTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E93FF2A7126FB00EA0221 /* AddTicketViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		535E93EE2A6F38CA00EA0221 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		535E93F72A6F3DFE00EA0221 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		535E93FB2A704A6E00EA0221 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		535E93FD2A71266C00EA0221 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		535E93FF2A7126FB00EA0221 /* AddTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTicketViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				535E93F72A6F3DFE00EA0221 /* User.swift */,
+				535E93FD2A71266C00EA0221 /* Ticket.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				535E93FB2A704A6E00EA0221 /* HomeViewController.swift */,
+				535E93FF2A7126FB00EA0221 /* AddTicketViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,7 +324,9 @@
 				535E93ED2A6F2C1900EA0221 /* RegisterViewController.swift in Sources */,
 				535E93BB2A6BEAA300EA0221 /* AppDelegate.swift in Sources */,
 				535E93F82A6F3DFE00EA0221 /* User.swift in Sources */,
+				535E94002A7126FB00EA0221 /* AddTicketViewController.swift in Sources */,
 				535E93BD2A6BEAA300EA0221 /* SceneDelegate.swift in Sources */,
+				535E93FE2A71266C00EA0221 /* Ticket.swift in Sources */,
 				535E93FC2A704A6E00EA0221 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
