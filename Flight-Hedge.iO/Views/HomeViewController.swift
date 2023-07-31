@@ -8,7 +8,17 @@
 import UIKit
 import Vision
 
+
+//MARK: Global Notification Key for Observer
+let ticketChangeNotificationKey = "flight.hedge"
+
+
 class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
+    
+    
+    let ticketChangeNotification = Notification.Name(ticketChangeNotificationKey)
     
     //Varibales
     var ticket: Ticket?
@@ -25,14 +35,53 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     //Labels
     @IBOutlet weak var departLabel: UILabel!
+    @IBOutlet weak var departTimeLabel: UILabel!
+    @IBOutlet weak var arrivaTimelLabel: UILabel!
+    @IBOutlet weak var estimatedDuration: UILabel!
+    @IBOutlet weak var terminal: UILabel!
+    @IBOutlet weak var arrivalLabel: UILabel!
     
-    @IBOutlet weak var departLabel2: UILabel!
+
     
+    
+    
+    
+    //Create a shared instance of VCOne
+
+     static var sharedInstance:HomeViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpViews()
+        createObserver()
+        
+        HomeViewController.sharedInstance = self
+        
+    }
+    
+    
+    //If you dont deinit & remove the notification, you will have all of these observers listening for nitifcations, it could cause confusion & mess
+//    deinit {
+//        NotificationCenter.default.removeObserver(self)
+//    }
+
+    
+    func createObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.updateTicketLabels(notification:)), name: ticketChangeNotification, object: nil)
+    }
+    
+    
+    @objc func updateTicketLabels(notification: Notification){
+        
+        //MARK: Update labels from Notification Center
+        departLabel.text = ticket!.departFrom
+        arrivalLabel.text = ticket!.arrivalTo
+        
+        departTimeLabel.text = ticket!.departTime
+        arrivaTimelLabel.text = ticket!.arrivalTime
+        estimatedDuration.text = ticket!.estimatedTime
+        terminal.text = ticket!.terminal
     }
     
     
@@ -74,9 +123,9 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             
             //We are in a closiure on a background thread, we want to make sure we dispatch to the main thread
-            DispatchQueue.main.async { self?.departLabel2.text = text
-                print("Flight Details ::\(text)")
-            }
+//            DispatchQueue.main.async { self?.departLabel2.text = text
+//                print("Flight Details ::\(text)")
+//            }
            
         }
         

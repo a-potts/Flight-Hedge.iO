@@ -42,22 +42,32 @@ class AddTicketViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+   
 
  
     @IBAction func addTicketTapped(_ sender: Any) {
         
         //Add Text Field Values to Ticket Model, then pass model back to previous view controller
         
-        guard let departFrom = departFromTextField.text, let arrivingTo = arrivingToTextField.text, let departTime = departTimeTextField.text, let arrivalTime = arrivalTimeTextField.text, let duration = durationTextField.text, let terminalNumber = terminalNumberTextField.text else {return}
+        guard let departFrom = departFromTextField.text, let arrivingTo = arrivingToTextField.text, let departTime = departTimeTextField.text, let arrivalTime = arrivalTimeTextField.text, let duration = durationTextField.text, let terminalNumber = terminalNumberTextField.text, let estimatedTime = durationTextField.text else {return}
         
-        let ticket = Ticket(departFrom: departFrom, arrivalTo: arrivingTo, departTime: departTime, arrivalTime: arrivalTime, terminal: terminalNumber)
+        let ticket = Ticket(departFrom: departFrom, arrivalTo: arrivingTo, departTime: departTime, arrivalTime: arrivalTime, terminal: terminalNumber, estimatedtime: estimatedTime)
         print("TICKET ADDED -> \(ticket.arrivalTime)")
         
         self.ticket = ticket
         
         print("TICKET ADDED -> \(ticket.departTime)")
         
+//        let homeVC = HomeViewController()
+//        homeVC.ticket = ticket
         
+        HomeViewController.sharedInstance?.ticket = ticket
+        print("Home TICKET ADDED -> \(HomeViewController.sharedInstance?.ticket?.departFrom)")
+        
+        let name = Notification.Name(rawValue: ticketChangeNotificationKey)
+        NotificationCenter.default.post(name: name, object: nil)
+        
+       dismiss(animated: true)
         
     }
     

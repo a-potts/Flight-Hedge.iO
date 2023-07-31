@@ -486,32 +486,19 @@
                                     <action selector="cameraButtonTapped:" destination="Dmf-8f-kf2" eventType="touchUpInside" id="ER9-RR-xAK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ov-L6-iFZ">
-                                <rect key="frame" x="22" y="659" width="355" height="101"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="Jsg-d3-Vwm"/>
-                                    <constraint firstAttribute="width" constant="355" id="bmD-aC-ReE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H0J-iv-rJ1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DsB-1P-zaJ" firstAttribute="top" secondItem="VDR-w4-QgE" secondAttribute="bottom" constant="39" id="0AO-Rk-bQu"/>
                             <constraint firstItem="H0J-iv-rJ1" firstAttribute="trailing" secondItem="HSO-jz-SBX" secondAttribute="trailing" constant="16" id="3vi-mh-w8m"/>
-                            <constraint firstItem="5ov-L6-iFZ" firstAttribute="leading" secondItem="H0J-iv-rJ1" secondAttribute="leading" constant="22" id="6r2-ei-VTf"/>
                             <constraint firstItem="Kt3-l9-atR" firstAttribute="top" secondItem="H0J-iv-rJ1" secondAttribute="top" constant="53" id="9Ka-c3-D74"/>
                             <constraint firstItem="HSO-jz-SBX" firstAttribute="top" secondItem="DsB-1P-zaJ" secondAttribute="bottom" constant="8" symbolic="YES" id="DCn-Z2-m4A"/>
                             <constraint firstItem="H0J-iv-rJ1" firstAttribute="trailing" secondItem="VDR-w4-QgE" secondAttribute="trailing" constant="16" id="UdW-f0-G6L"/>
                             <constraint firstItem="HSO-jz-SBX" firstAttribute="leading" secondItem="H0J-iv-rJ1" secondAttribute="leading" constant="16" id="Zda-d9-R49"/>
                             <constraint firstItem="H0J-iv-rJ1" firstAttribute="trailing" secondItem="F4H-iT-rEX" secondAttribute="trailing" constant="35" id="a5m-uC-blL"/>
                             <constraint firstItem="Kt3-l9-atR" firstAttribute="leading" secondItem="H0J-iv-rJ1" secondAttribute="leading" constant="16" id="cRr-aY-dlP"/>
-                            <constraint firstItem="H0J-iv-rJ1" firstAttribute="trailing" secondItem="5ov-L6-iFZ" secondAttribute="trailing" constant="16" id="gAL-rq-ePD"/>
                             <constraint firstItem="VDR-w4-QgE" firstAttribute="top" secondItem="Kt3-l9-atR" secondAttribute="bottom" constant="8" symbolic="YES" id="i8R-Wz-1DY"/>
-                            <constraint firstItem="H0J-iv-rJ1" firstAttribute="bottom" secondItem="5ov-L6-iFZ" secondAttribute="bottom" constant="92" id="jjf-h6-nET"/>
                             <constraint firstItem="F4H-iT-rEX" firstAttribute="top" secondItem="H0J-iv-rJ1" secondAttribute="top" constant="40" id="pQo-wY-LW4"/>
                             <constraint firstItem="DsB-1P-zaJ" firstAttribute="leading" secondItem="H0J-iv-rJ1" secondAttribute="leading" constant="16" id="pWh-fl-Rpe"/>
                             <constraint firstItem="VDR-w4-QgE" firstAttribute="leading" secondItem="H0J-iv-rJ1" secondAttribute="leading" constant="16" id="pd2-qu-r1B"/>
@@ -519,9 +506,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="l19-K5-pKt"/>
                     <connections>
+                        <outlet property="arrivaTimelLabel" destination="qNi-FP-sEr" id="MEj-Xw-S1W"/>
+                        <outlet property="arrivalLabel" destination="XGG-c2-Htd" id="6Kx-kP-WzM"/>
                         <outlet property="departLabel" destination="pMc-Xz-Bnz" id="rc5-z2-TaM"/>
-                        <outlet property="departLabel2" destination="5ov-L6-iFZ" id="5hC-TT-eD5"/>
+                        <outlet property="departTimeLabel" destination="HJH-UT-r8e" id="eWh-HP-Obo"/>
+                        <outlet property="estimatedDuration" destination="hFB-FB-KOg" id="w1t-Fv-4Nd"/>
                         <outlet property="insuranceQuoteView" destination="HSO-jz-SBX" id="AM7-8p-khk"/>
+                        <outlet property="terminal" destination="xiD-Wd-4tw" id="v6z-vx-XVL"/>
                         <outlet property="ticketDetailsView" destination="O8m-XW-SMB" id="wbi-zm-iYB"/>
                         <outlet property="ticketImage" destination="6pG-3I-dgj" id="1wY-5r-IIW"/>
                         <outlet property="ticketView" destination="VDR-w4-QgE" id="18P-Y0-yTq"/>

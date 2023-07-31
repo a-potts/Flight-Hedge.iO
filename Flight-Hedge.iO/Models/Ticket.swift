@@ -15,13 +15,15 @@ class Ticket {
     var departTime: String
     var arrivalTime: String
     var terminal: String
+    var estimatedTime: String
     
-    init(departFrom: String, arrivalTo: String, departTime: String, arrivalTime: String, terminal: String) {
+    init(departFrom: String, arrivalTo: String, departTime: String, arrivalTime: String, terminal: String, estimatedtime: String) {
         self.departFrom = departFrom
         self.arrivalTo = arrivalTo
         self.departTime = departTime
         self.arrivalTime = arrivalTime
         self.terminal = terminal
+        self.estimatedTime = estimatedtime
     }
     
     
